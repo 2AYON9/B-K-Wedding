@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f5ee" />
+  <meta name="description" content="A wedding invitation celebrating Bitul Patar and Krishna Moni Patar on 29 January 2027." />
+  <title>Bitul & Krishna Moni — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Wedding invitation home">B <span>&</span> K</a>
+    <div class="topbar-right">
+      <span class="date-chip">29 · 01 · 2027</span>
+      <label class="language-picker">
+        <span class="sr-only">Choose language</span>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="as">অসমীয়া</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1. Welcome / envelope entrance -->
+    <section class="entrance section-shell" id="welcome">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="welcomeEyebrow">A little note, a lifetime of love</span><span class="eyebrow-line"></span></div>
+      <h1 data-i18n="welcomeTitle">You are warmly<br><em>invited</em></h1>
+      <p class="muted intro" data-i18n="welcomeCopy">A special day becomes even more beautiful when shared with the people we love.</p>
+
+      <div class="envelope-stage" id="envelopeStage">
+        <div class="envelope-glow"></div>
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter">
+            <span class="letter-monogram">B <span>&</span> K</span>
+            <span class="letter-label" data-i18n="letterLabel">WEDDING INVITATION</span>
+            <span class="letter-date">29 · 01 · 2027</span>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="wax-seal">B<span>&</span>K</div>
+        </div>
+      </div>
+
+      <form id="guestForm" class="guest-form">
+        <label for="guestName" data-i18n="guestLabel">May we know your name?</label>
+        <div class="guest-input-row">
+          <input id="guestName" name="guestName" type="text" maxlength="50" autocomplete="name" placeholder="Enter your name" required />
+          <button class="button button-dark" type="submit"><span data-i18n="openInvite">Open invitation</span><span aria-hidden="true"> ↗</span></button>
+        </div>
+        <p class="tiny muted" data-i18n="guestPrivacy">Your name is used only to personalize this page.</p>
+      </form>
+      <button id="skipName" class="text-button" type="button" data-i18n="skipName">Continue without a name</button>
+    </section>
+
+    <!-- 2–4. Personalized reveal, couple names and date -->
+    <div id="invitationContent" class="invitation-content" hidden>
+      <section class="hero section-shell reveal" id="invitation">
+        <div class="hero-frame">
+          <span class="corner corner-tl"></span><span class="corner corner-tr"></span>
+          <span class="corner corner-bl"></span><span class="corner corner-br"></span>
+          <p class="eyebrow gold-text" data-i18n="heroEyebrow">WITH JOY IN OUR HEARTS</p>
+          <p class="personal-greeting" id="personalGreeting">Dear Guest,</p>
+          <h2 class="couple-name">Bitul <span class="ampersand">&</span><br class="mobile-break"> Krishna Moni</h2>
+          <p class="surname">PATAR</p>
+          <div class="ornament"><span></span> ✦ <span></span></div>
+          <p class="hero-copy" data-i18n="heroCopy">Together with our families, we invite you to celebrate the beginning of our forever.</p>
+          <div class="date-block">
+            <span data-i18n="saveTheDate">SAVE THE DATE</span>
+            <strong>FRIDAY</strong>
+            <div class="date-main"><span>29</span><i></i><span>JANUARY</span><i></i><span>2027</span></div>
+          </div>
+          <p class="assamese-line" lang="as">আপোনাৰ উপস্থিতিয়ে আমাৰ আনন্দ দুগুণ কৰিব।</p>
+          <a href="#message" class="button button-outline" data-i18n="exploreInvite">Explore the invitation ↓</a>
+        </div>
+      </section>
+
+      <!-- 5. Warm message -->
+      <section class="content-section message-section" id="message">
+        <div class="section-kicker">01 / <span data-i18n="sectionMessage">A heartfelt note</span></div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="messageEyebrow">A NOTE FROM THE HEART</p>
+          <h2 data-i18n="messageTitle">Your presence is<br><em>our present.</em></h2>
+        </div>
+        <div class="message-card">
+          <span class="quote-mark">“</span>
+          <p data-i18n="messageBody">As we begin a new chapter together, we would be honoured to have you beside us. Your blessings, laughter, and love will make this day truly unforgettable.</p>
+          <p class="signature">With love, <span>Bitul & Krishna Moni</span></p>
+        </div>
+      </section>
+
+      <!-- 6. Our story (placeholder) -->
+      <section class="content-section story-section" id="story">
+        <div class="section-kicker">02 / <span data-i18n="sectionStory">Our story</span></div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="storyEyebrow">TWO HEARTS, ONE JOURNEY</p>
+          <h2 data-i18n="storyTitle">A story still<br><em>being written.</em></h2>
+          <p class="muted" data-i18n="storyCopy">Every love story has its own little moments. We’ll add our favourite memories here soon.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot">✦</span><div><span class="timeline-label" data-i18n="storyMoment1">THE BEGINNING</span><h3 data-i18n="storyPlaceholder1">Where it all began</h3><p data-i18n="placeholder">A memory will be added here.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot">✦</span><div><span class="timeline-label" data-i18n="storyMoment2">THE JOURNEY</span><h3 data-i18n="storyPlaceholder2">Little moments, big meaning</h3><p data-i18n="placeholder">A memory will be added here.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot">✦</span><div><span class="timeline-label" data-i18n="storyMoment3">FOREVER STARTS</span><h3 data-i18n="storyPlaceholder3">And now, a new chapter</h3><p data-i18n="placeholder">A memory will be added here.</p></div></div>
+        </div>
+      </section>
+
+      <!-- 7. Wedding events -->
+      <section class="content-section events-section" id="events">
+        <div class="section-kicker">03 / <span data-i18n="sectionEvents">Wedding events</span></div>
+        <div class="section-heading centered">
+          <p class="eyebrow" data-i18n="eventsEyebrow">THE CELEBRATION</p>
+          <h2 data-i18n="eventsTitle">Moments to<br><em>celebrate together.</em></h2>
+          <p class="muted" data-i18n="eventsCopy">Event timings and details will be shared here once confirmed.</p>
+        </div>
+        <div class="event-grid">
+          <article class="event-card"><span class="event-number">01</span><div class="event-icon">✧</div><h3 data-i18n="eventOne">Pre-wedding ceremony</h3><p class="event-time" data-i18n="eventTime">Time to be announced</p><p class="muted" data-i18n="eventDetails">Date and venue details coming soon.</p></article>
+          <article class="event-card featured-event"><span class="event-number">02</span><div class="event-icon">❋</div><h3 data-i18n="eventTwo">Wedding ceremony</h3><p class="event-time">29 January 2027</p><p class="muted" data-i18n="eventDetails">Date and venue details coming soon.</p></article>
+          <article class="event-card"><span class="event-number">03</span><div class="event-icon">✦</div><h3 data-i18n="eventThree">Reception</h3><p class="event-time" data-i18n="eventTime">Time to be announced</p><p class="muted" data-i18n="eventDetails">Date and venue details coming soon.</p></article>
+        </div>
+      </section>
+
+      <!-- 8. Countdown -->
+      <section class="countdown-section">
+        <p class="eyebrow" data-i18n="countdownEyebrow">THE COUNTDOWN TO FOREVER</p>
+        <h2 data-i18n="countdownTitle">Until we say “I do”</h2>
+        <div class="countdown" aria-label="Countdown to the wedding">
+          <div><strong id="days">---</strong><span data-i18n="days">DAYS</span></div>
+          <i>:</i><div><strong id="hours">--</strong><span data-i18n="hours">HOURS</span></div>
+          <i>:</i><div><strong id="minutes">--</strong><span data-i18n="minutes">MINUTES</span></div>
+          <i>:</i><div><strong id="seconds">--</strong><span data-i18n="seconds">SECONDS</span></div>
+        </div>
+        <p class="countdown-date">29 · 01 · 2027</p>
+      </section>
+
+      <!-- 9. Gallery -->
+      <section class="content-section gallery-section" id="gallery">
+        <div class="section-kicker">04 / <span data-i18n="sectionGallery">The gallery</span></div>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="galleryEyebrow">LITTLE GLIMPSES OF US</p>
+          <h2 data-i18n="galleryTitle">Memories in<br><em>the making.</em></h2>
+          <p class="muted" data-i18n="galleryCopy">Our favourite photographs will find their place here.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-tile tile-tall"><span>01</span><div>✧</div><p data-i18n="photoPlaceholder">Photo coming soon</p></div>
+          <div class="gallery-tile tile-wide"><span>02</span><div>❋</div><p data-i18n="photoPlaceholder">Photo coming soon</p></div>
+          <div class="gallery-tile"><span>03</span><div>✦</div><p data-i18n="photoPlaceholder">Photo coming soon</p></div>
+        </div>
+      </section>
+
+      <!-- 10. Venue / map -->
+      <section class="content-section venue-section" id="venue">
+        <div class="section-kicker">05 / <span data-i18n="sectionVenue">Find the venue</span></div>
+        <div class="venue-card">
+          <div class="venue-art"><div class="venue-art-circle">⌖</div><span data-i18n="venueLabel">THE WEDDING VENUE</span></div>
+          <div class="venue-info">
+            <p class="eyebrow" data-i18n="venueEyebrow">WE’LL SAVE YOU A SEAT</p>
+            <h2 data-i18n="venueTitle">Meet us <em>here.</em></h2>
+            <p data-i18n="venueCopy">Venue name, address, and map link will be added once confirmed.</p>
+            <div class="venue-placeholder"><span>⌖</span><div><strong data-i18n="venueToCome">Location to be announced</strong><small data-i18n="venueToComeSub">We’ll update this section soon.</small></div></div>
+            <button class="button button-outline" type="button" disabled data-i18n="mapComing">Map link coming soon</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. RSVP (visual only for now) -->
+      <section class="content-section rsvp-section" id="rsvp">
+        <div class="section-kicker">06 / <span data-i18n="sectionRsvp">RSVP</span></div>
+        <div class="rsvp-card">
+          <p class="eyebrow" data-i18n="rsvpEyebrow">KINDLY REPLY</p>
+          <h2 data-i18n="rsvpTitle">Will you join<br><em>our celebration?</em></h2>
+          <p id="rsvpGreeting" class="muted" data-i18n="rsvpCopy">We hope to celebrate this special day with you.</p>
+          <div class="rsvp-actions">
+            <button class="button button-dark rsvp-choice" type="button" data-choice="yes" data-i18n="accept">Joyfully accept</button>
+            <button class="button button-outline rsvp-choice" type="button" data-choice="no" data-i18n="decline">Regretfully decline</button>
+          </div>
+          <p id="rsvpMessage" class="rsvp-message" role="status" aria-live="polite"></p>
+          <p class="tiny muted" data-i18n="rsvpDemoNote">Preview only: your response is not saved or sent yet.</p>
+        </div>
+      </section>
+
+      <!-- 12. Personalized closing -->
+      <section class="closing-section" id="closing">
+        <div class="closing-flower">✧</div>
+        <p class="eyebrow" data-i18n="closingEyebrow">UNTIL WE MEET</p>
+        <h2><span data-i18n="closingLine1">With love and gratitude,</span><br><em data-i18n="closingLine2">we’ll see you soon.</em></h2>
+        <p id="closingGuest" class="closing-guest">We can’t wait to celebrate with you.</p>
+        <div class="closing-names">Bitul <span>&</span> Krishna Moni Patar</div>
+        <div class="closing-date">29 JANUARY 2027</div>
+        <a href="#top" class="text-button" data-i18n="backTop">Back to the beginning ↑</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><span>B <span class="gold-text">&</span> K</span><p data-i18n="footerText">Made with love for a beautiful beginning.</p><span>29 · 01 · 2027</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
